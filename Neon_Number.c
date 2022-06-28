@@ -1,28 +1,21 @@
-#include <stdio.h>
- 
+#include<stdio.h>
 int main()
 {
-    int num, digit, sum =0;
-    
-    //Input a number
-   
-    scanf("%d",&num);
-        
-    //Calculate square of the input
-    int square = num*num;
-    
-    //Sum the digits of the square
-    while(square!=0){
-        digit = square%10;
-        sum += digit;
-        square = square/10;
+    int n,k,sum=0,d;
+    scanf("%d",&n);
+    k=n*n;
+    while(k>0)
+    {
+        d=k%10;
+        sum=sum+d;
+        k=k/10;
     }
-    
-    //Check if sum is equal to the input number
-    if(sum == num)
-        printf("Neon Number ");
+    if(sum==n)
+    {
+        printf("Neon Number");
+    }
     else
-        printf("Not Neon Number ");
- 
-    return 0;
+    {
+        printf("Not Neon Number");
+    }
 }
